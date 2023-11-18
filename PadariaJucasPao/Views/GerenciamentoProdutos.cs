@@ -82,12 +82,11 @@ namespace PadariaJucasPao.Views
             produto.Id = idSelecionado;
             produto.Nome = txtNomeEd.Text;
             produto.Preco = double.Parse(txtPrecoEd.Text);
-            produto.IdCategoria = int.Parse(cmbCategoriaEd.Text);
-
+            produto.IdCategoria = int.Parse(cmbCategoriaEd.Text.Split('-')[0]);
             //Editar:
             if (produto.Editar() == true)
             {
-                MessageBox.Show("Usuário modificado!", "sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Produto modificado!", "sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //atualizar odgv:
                 DgvProdutos.DataSource = produto.ListarTudoProd();
@@ -95,14 +94,14 @@ namespace PadariaJucasPao.Views
                 txtNomeEd.Clear();
                 txtPrecoEd.Clear();
                // cmbCategoriaEd.Clear(1);
-                lblApagarProd.Text = "Selecione o usuário para apagar.";
+                lblApagarProd.Text = "Selecione o produto para apagar.";
                 //Desabilitar os grbs
                 grbApagarProd.Enabled = false;
                 grbEditar.Enabled = false;
             }
             else
             {
-                MessageBox.Show("Falha ao modificar usuário!", "falha", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Falha ao modificar Produto!", "falha", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
 
