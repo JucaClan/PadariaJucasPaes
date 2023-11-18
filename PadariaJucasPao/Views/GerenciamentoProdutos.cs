@@ -164,5 +164,10 @@ namespace PadariaJucasPao.Views
 
            
         }
+
+        private void DgvProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

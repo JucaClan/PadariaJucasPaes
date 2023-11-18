@@ -76,6 +76,8 @@
             this.DgvProdutos.ReadOnly = true;
             this.DgvProdutos.Size = new System.Drawing.Size(665, 255);
             this.DgvProdutos.TabIndex = 5;
+            this.DgvProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellClick);
+            this.DgvProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProdutos_CellContentClick);
             // 
             // grbApagarProd
             // 
