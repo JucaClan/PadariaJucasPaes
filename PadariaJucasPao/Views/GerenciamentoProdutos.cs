@@ -42,7 +42,37 @@ namespace PadariaJucasPao.Views
 
         private void btnApagarProd_Click(object sender, EventArgs e)
         {
+            Classes.Produto produto = new Classes.Produto();
+            produto.Id = idSelecionado;
+            // Exibir mensagem de confirmação da exclusão:
+            var r = MessageBox.Show("Tem certeza que deseja remover?", "Atenção",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if (r == DialogResult.Yes)
+            {//Apagar
+
+                if (usuario.Apagar() == true)
+                {
+                    MessageBox.Show("Produto apagado! ", "Sucesso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //atualizar odgv:
+                    DgvProdutos.DataSource = produto.ListarTudoProd();
+                    // Limpar os campos:
+                    txtNomeCad.Clear();
+                    txtPrecoCad.Clear();
+                    lblApagarProd.Text = "Selecione o Produto para apagar.";
+                    //Desabilitar os grbs
+                    grbApagarProd.Enabled = false;
+                    grbEditar.Enabled = false;
+
+                }
+                else
+                {
+                    MessageBox.Show("Falha ao remover usuário! ", "Falha",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
         }
 
         private void dgvProdutos_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -76,8 +76,6 @@
             this.DgvProdutos.ReadOnly = true;
             this.DgvProdutos.Size = new System.Drawing.Size(665, 255);
             this.DgvProdutos.TabIndex = 5;
-            this.DgvProdutos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellClick);
-            this.DgvProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvProdutos_CellContentClick);
             // 
             // grbApagarProd
             // 
@@ -109,9 +107,9 @@
             this.lblApagarProd.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApagarProd.Location = new System.Drawing.Point(45, 56);
             this.lblApagarProd.Name = "lblApagarProd";
-            this.lblApagarProd.Size = new System.Drawing.Size(219, 19);
+            this.lblApagarProd.Size = new System.Drawing.Size(221, 19);
             this.lblApagarProd.TabIndex = 0;
-            this.lblApagarProd.Text = "Selecione o usuário para apagar.";
+            this.lblApagarProd.Text = "Selecione o produto para apagar.";
             // 
             // grbCadastrar
             // 
