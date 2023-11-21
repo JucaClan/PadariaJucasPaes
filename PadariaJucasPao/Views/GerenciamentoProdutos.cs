@@ -51,10 +51,11 @@ namespace PadariaJucasPao.Views
             if (r == DialogResult.Yes)
             {//Apagar
 
-                if (usuario.Apagar() == true)
+                if (produto.Apagar() == true)
                 {
                     MessageBox.Show("Produto apagado! ", "Sucesso",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     //atualizar odgv:
                     DgvProdutos.DataSource = produto.ListarTudoProd();
                     // Limpar os campos:
@@ -68,7 +69,7 @@ namespace PadariaJucasPao.Views
                 }
                 else
                 {
-                    MessageBox.Show("Falha ao remover usuário! ", "Falha",
+                    MessageBox.Show("Falha ao remover produto! ", "Falha",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
