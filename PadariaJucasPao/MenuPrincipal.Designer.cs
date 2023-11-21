@@ -47,6 +47,7 @@
             this.btnComandas.TabIndex = 0;
             this.btnComandas.Text = "Comandas";
             this.btnComandas.UseVisualStyleBackColor = false;
+            this.btnComandas.Click += new System.EventHandler(this.btnComandas_Click);
             // 
             // btnProdutos
             // 
@@ -125,7 +126,8 @@
             this.Controls.Add(this.btnComandas);
             this.Name = "MenuPrincipal";
             this.Opacity = 0.85D;
-            this.Text = "...";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Menu Principal";
             this.ResumeLayout(false);
             this.PerformLayout();
 

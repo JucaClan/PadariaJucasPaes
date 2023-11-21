@@ -45,5 +45,11 @@ namespace PadariaJucasPao
         {
 
         }
+
+        private void btnComandas_Click(object sender, EventArgs e)
+        {
+            Views.GerenciamentoComanda janela = new Views.GerenciamentoComanda();
+            janela.Show();
+        }
     }
 }

@@ -301,6 +301,8 @@
             this.Controls.Add(this.DgvProdutos);
             this.Controls.Add(this.lblGerenciamentoProd);
             this.Name = "GerenciamentoProdutos";
+            this.Opacity = 0.98D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GerenciamentoProdutos";
             ((System.ComponentModel.ISupportInitialize)(this.DgvProdutos)).EndInit();
             this.grbApagarProd.ResumeLayout(false);

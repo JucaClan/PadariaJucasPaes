@@ -63,7 +63,7 @@
             this.dgvUsuarios.Location = new System.Drawing.Point(21, 86);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
-            this.dgvUsuarios.Size = new System.Drawing.Size(808, 224);
+            this.dgvUsuarios.Size = new System.Drawing.Size(707, 224);
             this.dgvUsuarios.TabIndex = 0;
             this.dgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellClick);
             this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
@@ -71,11 +71,11 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblTitulo.Location = new System.Drawing.Point(145, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(147, 20);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(480, 49);
+            this.lblTitulo.Size = new System.Drawing.Size(424, 42);
             this.lblTitulo.TabIndex = 3;
             this.lblTitulo.Text = "Gerenciamento de Usuários";
             // 
@@ -88,8 +88,8 @@
             this.grbCadastro.Controls.Add(this.lblSenha);
             this.grbCadastro.Controls.Add(this.lblEmail);
             this.grbCadastro.Controls.Add(this.lblNomeCompleto);
-            this.grbCadastro.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbCadastro.Location = new System.Drawing.Point(21, 316);
+            this.grbCadastro.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbCadastro.Location = new System.Drawing.Point(41, 316);
             this.grbCadastro.Name = "grbCadastro";
             this.grbCadastro.Size = new System.Drawing.Size(334, 193);
             this.grbCadastro.TabIndex = 4;
@@ -177,8 +177,8 @@
             this.grbEditar.Controls.Add(this.label1);
             this.grbEditar.Controls.Add(this.label2);
             this.grbEditar.Controls.Add(this.label3);
-            this.grbEditar.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbEditar.Location = new System.Drawing.Point(361, 316);
+            this.grbEditar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbEditar.Location = new System.Drawing.Point(381, 316);
             this.grbEditar.Name = "grbEditar";
             this.grbEditar.Size = new System.Drawing.Size(325, 193);
             this.grbEditar.TabIndex = 7;
@@ -261,8 +261,8 @@
             // 
             this.grbApagar.Controls.Add(this.btnApagar);
             this.grbApagar.Controls.Add(this.lblApagar);
-            this.grbApagar.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbApagar.Location = new System.Drawing.Point(21, 515);
+            this.grbApagar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbApagar.Location = new System.Drawing.Point(41, 515);
             this.grbApagar.Name = "grbApagar";
             this.grbApagar.Size = new System.Drawing.Size(665, 80);
             this.grbApagar.TabIndex = 8;
@@ -296,13 +296,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(845, 600);
+            this.ClientSize = new System.Drawing.Size(750, 600);
             this.Controls.Add(this.grbApagar);
             this.Controls.Add(this.grbEditar);
             this.Controls.Add(this.grbCadastro);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.dgvUsuarios);
             this.Name = "GerenciadorUsuarios";
+            this.Opacity = 0.96D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GerenciadorUsuarios";
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.grbCadastro.ResumeLayout(false);
