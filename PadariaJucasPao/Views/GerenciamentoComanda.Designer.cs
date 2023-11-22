@@ -30,10 +30,10 @@
         {
             this.lblComanda = new System.Windows.Forms.Label();
             this.grbInformacoes = new System.Windows.Forms.GroupBox();
-            this.lblProduto = new System.Windows.Forms.Label();
-            this.txtComando = new System.Windows.Forms.TextBox();
-            this.txtProduto = new System.Windows.Forms.TextBox();
             this.btnContinuar = new System.Windows.Forms.Button();
+            this.txtProduto = new System.Windows.Forms.TextBox();
+            this.txtComanda = new System.Windows.Forms.TextBox();
+            this.lblProduto = new System.Windows.Forms.Label();
             this.grbLancamento = new System.Windows.Forms.GroupBox();
             this.btnLancar = new System.Windows.Forms.Button();
             this.txtQuantidadeL = new System.Windows.Forms.TextBox();
@@ -64,42 +64,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grbInformacoes.Controls.Add(this.btnContinuar);
             this.grbInformacoes.Controls.Add(this.txtProduto);
-            this.grbInformacoes.Controls.Add(this.txtComando);
+            this.grbInformacoes.Controls.Add(this.txtComanda);
             this.grbInformacoes.Controls.Add(this.lblProduto);
             this.grbInformacoes.Controls.Add(this.lblComanda);
             this.grbInformacoes.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbInformacoes.Location = new System.Drawing.Point(16, 71);
             this.grbInformacoes.Name = "grbInformacoes";
-            this.grbInformacoes.Size = new System.Drawing.Size(259, 304);
+            this.grbInformacoes.Size = new System.Drawing.Size(341, 304);
             this.grbInformacoes.TabIndex = 1;
             this.grbInformacoes.TabStop = false;
             this.grbInformacoes.Text = "Informações:";
-            // 
-            // lblProduto
-            // 
-            this.lblProduto.AutoSize = true;
-            this.lblProduto.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProduto.Location = new System.Drawing.Point(21, 99);
-            this.lblProduto.Name = "lblProduto";
-            this.lblProduto.Size = new System.Drawing.Size(99, 29);
-            this.lblProduto.TabIndex = 1;
-            this.lblProduto.Text = "Produto:";
-            // 
-            // txtComando
-            // 
-            this.txtComando.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComando.Location = new System.Drawing.Point(126, 48);
-            this.txtComando.Name = "txtComando";
-            this.txtComando.Size = new System.Drawing.Size(111, 33);
-            this.txtComando.TabIndex = 2;
-            // 
-            // txtProduto
-            // 
-            this.txtProduto.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProduto.Location = new System.Drawing.Point(126, 99);
-            this.txtProduto.Name = "txtProduto";
-            this.txtProduto.Size = new System.Drawing.Size(111, 33);
-            this.txtProduto.TabIndex = 3;
             // 
             // btnContinuar
             // 
@@ -111,6 +85,33 @@
             this.btnContinuar.TabIndex = 4;
             this.btnContinuar.Text = "Continuar";
             this.btnContinuar.UseVisualStyleBackColor = false;
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
+            // 
+            // txtProduto
+            // 
+            this.txtProduto.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProduto.Location = new System.Drawing.Point(126, 99);
+            this.txtProduto.Name = "txtProduto";
+            this.txtProduto.Size = new System.Drawing.Size(111, 23);
+            this.txtProduto.TabIndex = 3;
+            // 
+            // txtComanda
+            // 
+            this.txtComanda.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComanda.Location = new System.Drawing.Point(126, 48);
+            this.txtComanda.Name = "txtComanda";
+            this.txtComanda.Size = new System.Drawing.Size(111, 23);
+            this.txtComanda.TabIndex = 2;
+            // 
+            // lblProduto
+            // 
+            this.lblProduto.AutoSize = true;
+            this.lblProduto.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProduto.Location = new System.Drawing.Point(21, 99);
+            this.lblProduto.Name = "lblProduto";
+            this.lblProduto.Size = new System.Drawing.Size(99, 29);
+            this.lblProduto.TabIndex = 1;
+            this.lblProduto.Text = "Produto:";
             // 
             // grbLancamento
             // 
@@ -119,6 +120,7 @@
             this.grbLancamento.Controls.Add(this.txtProdutoL);
             this.grbLancamento.Controls.Add(this.lblQuantidadeL);
             this.grbLancamento.Controls.Add(this.lblProdutoL);
+            this.grbLancamento.Enabled = false;
             this.grbLancamento.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbLancamento.Location = new System.Drawing.Point(16, 337);
             this.grbLancamento.Name = "grbLancamento";
@@ -137,21 +139,23 @@
             this.btnLancar.TabIndex = 4;
             this.btnLancar.Text = "Lançar";
             this.btnLancar.UseVisualStyleBackColor = false;
+            this.btnLancar.Click += new System.EventHandler(this.btnLancar_Click);
             // 
             // txtQuantidadeL
             // 
-            this.txtQuantidadeL.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantidadeL.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantidadeL.Location = new System.Drawing.Point(148, 95);
             this.txtQuantidadeL.Name = "txtQuantidadeL";
-            this.txtQuantidadeL.Size = new System.Drawing.Size(111, 33);
+            this.txtQuantidadeL.Size = new System.Drawing.Size(111, 23);
             this.txtQuantidadeL.TabIndex = 3;
             // 
             // txtProdutoL
             // 
-            this.txtProdutoL.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProdutoL.Enabled = false;
+            this.txtProdutoL.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProdutoL.Location = new System.Drawing.Point(148, 48);
             this.txtProdutoL.Name = "txtProdutoL";
-            this.txtProdutoL.Size = new System.Drawing.Size(111, 33);
+            this.txtProdutoL.Size = new System.Drawing.Size(111, 23);
             this.txtProdutoL.TabIndex = 2;
             // 
             // lblQuantidadeL
@@ -177,16 +181,17 @@
             // dgvComandas
             // 
             this.dgvComandas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvComandas.Location = new System.Drawing.Point(309, 78);
+            this.dgvComandas.Location = new System.Drawing.Point(300, 78);
             this.dgvComandas.Name = "dgvComandas";
-            this.dgvComandas.Size = new System.Drawing.Size(469, 500);
+            this.dgvComandas.Size = new System.Drawing.Size(560, 500);
             this.dgvComandas.TabIndex = 6;
+            this.dgvComandas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComandas_CellContentClick);
             // 
             // lblGerenciamentoDeComandas
             // 
             this.lblGerenciamentoDeComandas.AutoSize = true;
             this.lblGerenciamentoDeComandas.Font = new System.Drawing.Font("Calibri", 30F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGerenciamentoDeComandas.Location = new System.Drawing.Point(138, 9);
+            this.lblGerenciamentoDeComandas.Location = new System.Drawing.Point(181, 9);
             this.lblGerenciamentoDeComandas.Name = "lblGerenciamentoDeComandas";
             this.lblGerenciamentoDeComandas.Size = new System.Drawing.Size(509, 49);
             this.lblGerenciamentoDeComandas.TabIndex = 7;
@@ -197,7 +202,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(790, 590);
+            this.ClientSize = new System.Drawing.Size(872, 590);
             this.Controls.Add(this.lblGerenciamentoDeComandas);
             this.Controls.Add(this.dgvComandas);
             this.Controls.Add(this.grbLancamento);
@@ -222,7 +227,7 @@
         private System.Windows.Forms.GroupBox grbInformacoes;
         private System.Windows.Forms.Button btnContinuar;
         private System.Windows.Forms.TextBox txtProduto;
-        private System.Windows.Forms.TextBox txtComando;
+        private System.Windows.Forms.TextBox txtComanda;
         private System.Windows.Forms.Label lblProduto;
         private System.Windows.Forms.GroupBox grbLancamento;
         private System.Windows.Forms.Button btnLancar;

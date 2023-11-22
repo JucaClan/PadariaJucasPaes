@@ -94,20 +94,20 @@
             // lblMenuPrincipal
             // 
             this.lblMenuPrincipal.AutoSize = true;
-            this.lblMenuPrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenuPrincipal.Location = new System.Drawing.Point(96, 23);
+            this.lblMenuPrincipal.Font = new System.Drawing.Font("Calibri", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenuPrincipal.Location = new System.Drawing.Point(122, 24);
             this.lblMenuPrincipal.Name = "lblMenuPrincipal";
-            this.lblMenuPrincipal.Size = new System.Drawing.Size(222, 33);
+            this.lblMenuPrincipal.Size = new System.Drawing.Size(194, 36);
             this.lblMenuPrincipal.TabIndex = 4;
             this.lblMenuPrincipal.Text = "Menu Principal";
             // 
             // lblBoasVindas
             // 
             this.lblBoasVindas.AutoSize = true;
-            this.lblBoasVindas.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBoasVindas.Location = new System.Drawing.Point(86, 79);
+            this.lblBoasVindas.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBoasVindas.Location = new System.Drawing.Point(93, 81);
             this.lblBoasVindas.Name = "lblBoasVindas";
-            this.lblBoasVindas.Size = new System.Drawing.Size(282, 26);
+            this.lblBoasVindas.Size = new System.Drawing.Size(249, 23);
             this.lblBoasVindas.TabIndex = 5;
             this.lblBoasVindas.Text = "Olá, escolha uma opção a baixo";
             this.lblBoasVindas.Click += new System.EventHandler(this.lblBoasVindas_Click);
