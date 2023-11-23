@@ -42,39 +42,71 @@ namespace PadariaJucasPao.Views
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            grbLancamento.Enabled = true;
-            grbInformacoes.Enabled = false;
+            if (txtComanda.Text != "" && txtProduto.Text != "")
+            {
+                grbLancamento.Enabled = true;
+                grbInformacoes.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Verifique as informações digitadas! ", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
 
         private void btnLancar_Click(object sender, EventArgs e)
         {
-            var r = MessageBox.Show("Tem certeza que deseja lançar?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (r == DialogResult.Yes)
+            if (txtQuantidadeL.Text != "")
             {
-                Classes.OrdemComanda ordemComanda = new Classes.OrdemComanda();
-                //obter os valores dos campos:
-                ordemComanda.IdFicha = int.Parse(txtComanda.Text);
-                ordemComanda.IdProduto = int.Parse(txtProduto.Text);
-                ordemComanda.Quantidade = int.Parse(txtQuantidadeL.Text);
-                ordemComanda.IdResp = usuario.Id;
+                var r = MessageBox.Show("Tem certeza que deseja lançar?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                //efetuar o cadastro
-                if (ordemComanda.NovoLancamento() == true)
+                if (r == DialogResult.Yes && txtQuantidadeL.Text != "")
                 {
-                    MessageBox.Show("Lançamento efetuado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //
-                    grbLancamento.Enabled = false;
-                    grbInformacoes.Enabled = true;
-                    txtProduto.Clear();
-                    txtQuantidadeL.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("lançamento efetuado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Classes.OrdemComanda ordemComanda = new Classes.OrdemComanda();
+                    //obter os valores dos campos:
+                    ordemComanda.IdFicha = int.Parse(txtComanda.Text);
+                    ordemComanda.IdProduto = int.Parse(txtProduto.Text);
+                    ordemComanda.Quantidade = int.Parse(txtQuantidadeL.Text);
+                    ordemComanda.IdResp = usuario.Id;
+
+                    //efetuar o cadastro
+                    if (ordemComanda.NovoLancamento() == true)
+                    {
+                        MessageBox.Show("Lançamento efetuado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //
+                        grbLancamento.Enabled = false;
+                        grbInformacoes.Enabled = true;
+                        txtProduto.Clear();
+                        txtQuantidadeL.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("lançamento efetuado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
+            else
+            {
+                MessageBox.Show("Informe a quantidade! ", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LimparTudo()
+        {
+            // Limpar os campos:
+            txtProduto.Clear();
+            txtProdutoL.Clear();
+            txtQuantidadeL.Clear();
+            txtComanda.Clear();
 
+            // Resetar os grbs:
+            grbInformacoes.Enabled = true;
+            grbLancamento.Enabled = false;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimparTudo();
         }
     }
 }

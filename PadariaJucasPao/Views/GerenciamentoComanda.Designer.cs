@@ -35,6 +35,7 @@
             this.txtComanda = new System.Windows.Forms.TextBox();
             this.lblProduto = new System.Windows.Forms.Label();
             this.grbLancamento = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnLancar = new System.Windows.Forms.Button();
             this.txtQuantidadeL = new System.Windows.Forms.TextBox();
             this.txtProdutoL = new System.Windows.Forms.TextBox();
@@ -70,7 +71,7 @@
             this.grbInformacoes.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbInformacoes.Location = new System.Drawing.Point(16, 71);
             this.grbInformacoes.Name = "grbInformacoes";
-            this.grbInformacoes.Size = new System.Drawing.Size(341, 304);
+            this.grbInformacoes.Size = new System.Drawing.Size(259, 242);
             this.grbInformacoes.TabIndex = 1;
             this.grbInformacoes.TabStop = false;
             this.grbInformacoes.Text = "Informações:";
@@ -79,7 +80,7 @@
             // 
             this.btnContinuar.BackColor = System.Drawing.Color.SaddleBrown;
             this.btnContinuar.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinuar.Location = new System.Drawing.Point(39, 190);
+            this.btnContinuar.Location = new System.Drawing.Point(39, 179);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(179, 42);
             this.btnContinuar.TabIndex = 4;
@@ -115,6 +116,7 @@
             // 
             // grbLancamento
             // 
+            this.grbLancamento.Controls.Add(this.btnCancelar);
             this.grbLancamento.Controls.Add(this.btnLancar);
             this.grbLancamento.Controls.Add(this.txtQuantidadeL);
             this.grbLancamento.Controls.Add(this.txtProdutoL);
@@ -122,18 +124,30 @@
             this.grbLancamento.Controls.Add(this.lblProdutoL);
             this.grbLancamento.Enabled = false;
             this.grbLancamento.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grbLancamento.Location = new System.Drawing.Point(16, 337);
+            this.grbLancamento.Location = new System.Drawing.Point(16, 319);
             this.grbLancamento.Name = "grbLancamento";
-            this.grbLancamento.Size = new System.Drawing.Size(259, 242);
+            this.grbLancamento.Size = new System.Drawing.Size(259, 259);
             this.grbLancamento.TabIndex = 5;
             this.grbLancamento.TabStop = false;
             this.grbLancamento.Text = "Lançameto:";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Crimson;
+            this.btnCancelar.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(39, 211);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(179, 42);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnLancar
             // 
             this.btnLancar.BackColor = System.Drawing.Color.SaddleBrown;
             this.btnLancar.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLancar.Location = new System.Drawing.Point(39, 181);
+            this.btnLancar.Location = new System.Drawing.Point(39, 141);
             this.btnLancar.Name = "btnLancar";
             this.btnLancar.Size = new System.Drawing.Size(179, 42);
             this.btnLancar.TabIndex = 4;
@@ -180,6 +194,7 @@
             // 
             // dgvComandas
             // 
+            this.dgvComandas.BackgroundColor = System.Drawing.Color.NavajoWhite;
             this.dgvComandas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvComandas.Location = new System.Drawing.Point(300, 78);
             this.dgvComandas.Name = "dgvComandas";
@@ -237,5 +252,6 @@
         private System.Windows.Forms.Label lblProdutoL;
         private System.Windows.Forms.DataGridView dgvComandas;
         private System.Windows.Forms.Label lblGerenciamentoDeComandas;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

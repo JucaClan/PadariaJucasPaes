@@ -70,6 +70,7 @@
             // 
             this.DgvProdutos.AllowUserToAddRows = false;
             this.DgvProdutos.AllowUserToDeleteRows = false;
+            this.DgvProdutos.BackgroundColor = System.Drawing.Color.NavajoWhite;
             this.DgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProdutos.Location = new System.Drawing.Point(16, 61);
             this.DgvProdutos.Name = "DgvProdutos";
